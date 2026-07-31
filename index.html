@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhyMentor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Phy<span>Mentor</span></h2>
+
+        <p>Tu mentor en Física</p>
+
+        <nav>
+
+            <a class="active">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+            </a>
+
+            <a>
+                <i class="fa-solid fa-book"></i>
+                Temas
+            </a>
+
+            <a>
+                <i class="fa-solid fa-pencil"></i>
+                Ejercicios
+            </a>
+
+            <a>
+                <i class="fa-solid fa-file"></i>
+                Exámenes
+            </a>
+
+            <a>
+                <i class="fa-solid fa-chart-line"></i>
+                Progreso
+            </a>
+
+            <a>
+                <i class="fa-solid fa-circle-question"></i>
+                Ayuda
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+        <header>
+
+            <h1>Phy<span>Mentor</span></h1>
+
+            <p>¿Qué tema de Física quieres explorar hoy?</p>
+
+        </header>
+
+        <!-- CHAT -->
+
+        <section class="chat">
+
+            <div id="chat-box">
+
+                <div class="bot-message">
+
+                    👋 ¡Hola!
+
+                    Soy PhyMentor.
+
+                    Pregúntame cualquier tema de Física.
+
+                </div>
+
+            </div>
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Escribe tu duda...">
+
+                <button id="send-btn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- TARJETAS -->
+<section class="cards">
+
+    <div class="card">
+        🚗
+        <h3>Cinemática</h3>
+        <p>Movimiento, velocidad y aceleración.</p>
+    </div>
+
+    <div class="card">
+        ⚙️
+        <h3>Mecánica</h3>
+        <p>Fuerzas, leyes de Newton y equilibrio.</p>
+    </div>
+
+    <div class="card">
+        🌡️
+        <h3>Temperatura y Calor</h3>
+        <p>Calor, escalas térmicas y transferencia.</p>
+    </div>
+
+</section>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
