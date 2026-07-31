@@ -1,0 +1,228 @@
+/* ===========================
+   CONFIGURACIÓN GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#08111f;
+    color:white;
+}
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    width:260px;
+    background:#0d1b2a;
+    padding:30px 20px;
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.sidebar h2{
+    font-size:32px;
+}
+
+.sidebar span{
+    color:#36d6ff;
+}
+
+.sidebar p{
+    margin-top:8px;
+    color:#9db4c8;
+    margin-bottom:35px;
+}
+
+.sidebar nav{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.sidebar nav a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    color:white;
+
+    text-decoration:none;
+}
+
+.sidebar nav a:hover{
+    background:#1b4c9a;
+}
+
+.sidebar .active{
+    background:#2563eb;
+}
+
+/* ===========================
+   CONTENIDO
+=========================== */
+
+main{
+    flex:1;
+    padding:40px;
+}
+
+header h1{
+    font-size:48px;
+}
+
+header span{
+    color:#36d6ff;
+}
+
+header p{
+    color:#b7c8d6;
+    margin-top:8px;
+}
+
+/* ===========================
+   CHAT
+=========================== */
+
+.chat{
+
+    margin-top:35px;
+
+    background:#10233b;
+
+    border-radius:20px;
+
+    padding:25px;
+}
+
+#chat-box{
+
+    height:260px;
+
+    overflow-y:auto;
+
+    margin-bottom:20px;
+}
+
+.bot-message{
+
+    background:#1d3557;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    width:fit-content;
+
+    max-width:70%;
+}
+
+.input-area{
+
+    display:flex;
+
+    gap:15px;
+}
+
+.input-area input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+}
+
+.input-area button{
+
+    width:70px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.input-area button:hover{
+
+    background:#1d4ed8;
+}
+
+/* ===========================
+   TARJETAS
+=========================== */
+
+.cards{
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.card{
+
+    background:#10233b;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    font-size:28px;
+}
+
+.card h3{
+
+    margin-top:15px;
+
+    font-size:18px;
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    background:#16365d;
+}
