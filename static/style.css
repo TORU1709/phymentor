@@ -1,0 +1,713 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at right,#2563eb33,transparent 40%),
+    linear-gradient(135deg,#020617,#0f172a,#1e3a8a);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+
+.container{
+
+    width:95%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:25px;
+
+}
+
+
+
+/* TITULO */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+header h1{
+
+    font-size:50px;
+
+    letter-spacing:2px;
+
+    text-shadow:
+    0 0 10px #38bdf8,
+    0 0 30px #2563eb;
+
+}
+
+
+header p{
+
+    color:#bfdbfe;
+
+    font-size:18px;
+
+}
+
+
+
+
+/* ESTRUCTURA PRINCIPAL */
+
+.main-interface{
+
+    display:grid;
+
+    grid-template-columns:260px 1fr;
+
+    gap:20px;
+
+    min-height:600px;
+
+}
+
+
+
+/* MENU IZQUIERDO */
+
+.menu{
+
+    background:rgba(15,23,42,.65);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid #38bdf855;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:
+    0 0 30px #2563eb33;
+
+
+}
+
+
+
+.menu h3{
+
+    margin:30px 0 15px;
+
+    color:#93c5fd;
+
+}
+
+
+
+
+.tab-btn,
+.card{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border-radius:18px;
+
+    border:1px solid #38bdf8;
+
+    background:
+    linear-gradient(145deg,#1e40af,#172554);
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 0 15px #2563eb55;
+
+}
+
+
+
+.tab-btn:hover,
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 25px #38bdf8;
+
+}
+
+
+
+.card span{
+
+    display:block;
+
+    margin-top:8px;
+
+}
+
+
+
+
+/* ZONA DERECHA */
+
+
+.workspace{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+/* NEWTON */
+
+.newton-area{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+}
+
+
+
+.newton-img{
+
+    width:100%;
+
+    max-width:550px;
+
+    max-height:400px;
+
+    object-fit:contain;
+
+
+    filter:
+    drop-shadow(0 0 20px #38bdf8)
+    drop-shadow(0 0 50px #2563eb);
+
+
+    animation:flotar 5s ease-in-out infinite;
+
+}
+
+
+
+@keyframes flotar{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* CHAT */
+
+
+#chat-container{
+
+    width:90%;
+
+    max-width:850px;
+
+}
+
+
+
+#chat{
+
+    min-height:120px;
+
+    max-height:420px;
+
+    overflow-y:auto;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid #38bdf855;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    backdrop-filter:blur(10px);
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+}
+
+.bot{
+
+
+background:#dbeafe;
+
+
+color:#111827;
+
+
+padding:15px;
+
+
+border-radius:18px;
+
+
+margin-bottom:15px;
+
+
+width:fit-content;
+
+
+max-width:85%;
+
+
+}
+
+
+
+.user{
+
+
+background:#2563eb;
+
+
+color:white;
+
+
+padding:15px;
+
+
+border-radius:18px;
+
+
+margin-bottom:15px;
+
+
+margin-left:auto;
+
+
+width:fit-content;
+
+
+max-width:85%;
+
+
+}
+
+
+
+
+/* BARRA IA */
+
+
+.input-area{
+
+
+display:flex;
+
+gap:12px;
+
+
+}
+
+
+
+input{
+
+
+flex:1;
+
+
+padding:17px 20px;
+
+
+border-radius:30px;
+
+
+border:none;
+
+
+background:#f8fafc;
+
+
+font-size:16px;
+
+
+}
+
+
+
+input:focus{
+
+outline:none;
+
+box-shadow:
+0 0 15px #38bdf8;
+
+}
+
+
+
+
+.input-area button{
+
+
+width:60px;
+
+
+border-radius:50%;
+
+
+border:none;
+
+
+cursor:pointer;
+
+
+background:#2563eb;
+
+
+color:white;
+
+
+font-size:22px;
+
+
+box-shadow:
+0 0 20px #2563eb;
+
+
+transition:.3s;
+
+
+}
+
+
+
+.input-area button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+
+
+/* QUIZ */
+
+
+.quiz-container{
+
+
+width:90%;
+
+max-width:850px;
+
+
+background:rgba(15,23,42,.8);
+
+
+padding:25px;
+
+
+border-radius:25px;
+
+
+border:1px solid #38bdf8;
+
+
+box-shadow:
+0 0 30px #2563eb55;
+
+
+animation:fade .4s;
+
+
+}
+
+
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:900px){
+
+
+.main-interface{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.menu{
+
+order:2;
+
+}
+
+
+.workspace{
+
+order:1;
+
+}
+
+
+
+.newton-img{
+
+max-width:450px;
+
+}
+
+
+}
+/* ==========================
+   ESTILO FUTURISTA DEL QUIZ
+========================== */
+
+
+#quiz-content{
+
+    margin-top:20px;
+
+}
+
+
+
+#quiz-content h3{
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+    color:#dbeafe;
+
+}
+
+
+
+
+.opciones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+
+.opciones button{
+
+
+    padding:15px;
+
+
+    border-radius:18px;
+
+
+    border:1px solid #38bdf8;
+
+
+    background:
+    linear-gradient(145deg,#172554,#1e40af);
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+    box-shadow:
+    0 0 15px #2563eb55;
+
+
+}
+
+
+
+.opciones button:hover{
+
+
+    transform:translateX(8px);
+
+
+    box-shadow:
+    0 0 25px #38bdf8;
+
+
+}
+
+
+
+
+.quiz-container h2{
+
+
+    text-align:center;
+
+
+    color:#7dd3fc;
+
+
+    text-shadow:
+    0 0 15px #38bdf8;
+
+
+}
+/* ======================
+   BARRA DE PROGRESO QUIZ
+====================== */
+
+
+.progreso-texto{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    color:#bfdbfe;
+
+    font-size:16px;
+
+}
+
+
+
+.barra-progreso{
+
+
+    width:100%;
+
+
+    height:12px;
+
+
+    background:#172554;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.progreso{
+
+
+    height:100%;
+
+
+    background:#38bdf8;
+
+
+    box-shadow:
+    0 0 15px #38bdf8;
+
+
+    transition:.5s;
+
+
+}

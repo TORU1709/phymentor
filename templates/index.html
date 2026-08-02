@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhyMentor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <header>
+
+        <h1>🤖 PhyMentor</h1>
+
+        <p>
+            Tu asistente inteligente para aprender Física
+        </p>
+
+    </header>
+
+
+
+    <div class="main-interface">
+
+
+        <!-- PANEL IZQUIERDO -->
+
+        <aside class="menu">
+
+
+            <button class="tab-btn active" onclick="mostrarChat()">
+                💬 Chat
+            </button>
+
+
+            <button class="tab-btn" onclick="mostrarQuiz()">
+                📝 Quiz
+            </button>
+
+
+            <h3>Temas</h3>
+
+
+            <button class="card" onclick="preguntaRapida('Cinemática')">
+
+                🚗
+
+                <span>Cinemática</span>
+
+            </button>
+
+
+
+            <button class="card" onclick="preguntaRapida('Mecánica')">
+
+                ⚙️
+
+                <span>Mecánica</span>
+
+            </button>
+
+
+
+            <button class="card" onclick="preguntaRapida('Temperatura y Calor')">
+
+                🌡️
+
+                <span>Temperatura y Calor</span>
+
+            </button>
+
+
+        </aside>
+
+
+
+
+        <!-- PARTE DERECHA -->
+
+        <section class="workspace">
+
+
+            <div class="newton-area">
+
+
+                <img 
+                src="{{ url_for('static', filename='images/newton.png.jpeg') }}"
+                alt="Isaac Newton"
+                class="newton-img">
+
+
+            </div>
+
+
+
+
+            <!-- CHAT -->
+
+            <div id="chat-container">
+
+
+                <div id="chat">
+
+
+                    <div class="bot">
+
+👋 ¡Hola! Soy <b>PhyMentor</b> 🤖
+
+<br><br>
+
+Pregúntame sobre:
+
+🚗 Cinemática · ⚙️ Mecánica · 🌡️ Temperatura y Calor
+
+</div>
+
+
+                </div>
+
+
+                <div class="input-area">
+
+
+                    <input
+                    id="mensaje"
+                    type="text"
+                    placeholder="Escribe tu pregunta de Física...">
+
+
+                    <button onclick="enviarMensaje()">
+                        ➤
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- QUIZ -->
+
+            <div id="quiz-container" class="quiz-container" style="display:none;">
+
+
+                <h2>
+                    📝 Quiz de Física
+                </h2>
+
+
+                <div id="quiz-content">
+
+                </div>
+
+
+            </div>
+
+
+
+        </section>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+
+</html>
