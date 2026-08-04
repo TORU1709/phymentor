@@ -109,15 +109,30 @@ utilizando el material del curso.
     # BUSCAR EN LA BASE DE DATOS
     # ------------------------
 
+    coincidencias = []
+
     for tema in KNOWLEDGE.values():
 
         for contenido in tema.values():
 
             for palabra in contenido["keywords"]:
 
-                if quitar_tildes(palabra) in mensaje:
+                palabra_normalizada = quitar_tildes(palabra)
 
-                    return f"{contenido['titulo']}\n\n{contenido['respuesta']}"
+                if palabra_normalizada in mensaje:
+
+                    coincidencias.append({
+                        "longitud": len(palabra_normalizada),
+                        "contenido": contenido
+                    })
+
+    if coincidencias:
+
+        mejor = max(coincidencias, key=lambda x: x["longitud"])
+
+        contenido = mejor["contenido"]
+
+        return f"{contenido['titulo']}\n\n{contenido['respuesta']}"
 
     # ------------------------
     # SI NO ENCUENTRA
@@ -138,3 +153,4 @@ Puedes intentar con consultas como:
 
 • Fuerza
 """
+

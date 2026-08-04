@@ -410,7 +410,6 @@ Material del curso de Física.
 
         "keywords":[
             "segunda ley",
-            "fuerza",
             "newton 2"
         ],
 
